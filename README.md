@@ -36,7 +36,7 @@ pip install model-profiler
 or latest version from [PyPI project site](https://pypi.org/project/model-profiler/)
 ## Usage
 
-Firs load any model built using keras or tensorflow. Here for simplicity we will load model from kera applications.
+First load any model built using keras or tensorflow. Here for simplicity we will load model from keras applications.
 
 ```python
 form tensorflow.keras.applications import VGG16
@@ -69,20 +69,20 @@ print(profile)
 | Model Parameters                 | 138.357544          | Million |
 | Memory Required by Model Weights | 527.7921447753906   | MB      |
 ```
-Default units for the prfiler are
+Default units for the profiler are
 
 ```
 # in order 
 use_units = ['GPU IDs', 'BFLOPs', 'GB', 'Million', 'MB']
 
 ```
-You can change units by changing the list entry in appropriate location. For example if you want to get `model` FLOPs in million just change the list as follows.
+You can change units by changing the list entry in appropriate location. For example, if you want to get `model` FLOPs in millions just change the list as follows.
 
 ```
 # keep order 
 use_units = ['GPU IDs', 'MFLOPs', 'GB', 'Million', 'MB']
 ```
-### Availabel units are
+### Available units are
 ```
     'GB':memory unit gega-byte
     'MB': memory unit mega-byte
